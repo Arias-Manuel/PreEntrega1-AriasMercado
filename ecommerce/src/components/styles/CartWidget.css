@@ -1,0 +1,9 @@
+.cart-widget {
+  position: relative;
+  margin: auto 0;
+  display: inline-flex;
+}
+
+.qty-display {
+  color: white;
+}
