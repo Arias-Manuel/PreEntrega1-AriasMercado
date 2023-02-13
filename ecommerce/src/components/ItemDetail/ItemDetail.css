@@ -1,0 +1,28 @@
+.ItemDetail {
+  margin: 50px 50px;
+  border: 3px solid white;
+}
+
+.producto-nombre {
+  font-size: 3rem;
+  color: white;
+}
+
+.ItemDetail-img {
+  height: 350px;
+  width: 300px;
+}
+
+.description {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 2rem;
+  margin: 10px auto;
+  color: white;
+  border: 1px solid black;
+  width: 85%;
+}
+
+.price {
+  font-size: 1.8rem;
+  color: white;
+}

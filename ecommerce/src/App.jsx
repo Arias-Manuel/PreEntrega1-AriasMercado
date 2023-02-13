@@ -1,21 +1,23 @@
 import "./App.css";
-
-import NavBar from "./components/NavBar";
-
-import ItemlistContainer from "./components/ItemListContainer";
-
-import Gaming from "./components/Gaming";
+import Gaming from "./components/Gaming/Gaming";
+import Navbar from "./components/Navbar/Navbar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <NavBar background={"transparent"} />
-      <Gaming tittle={Gaming} />
-
-      <ItemlistContainer greetings={"¡Saludos!"} />
-
-      <ItemlistContainer greetings={"En un momento abriremos :D"} />
-    </>
+    <section className="App">
+      <BrowserRouter>
+        <Navbar />
+        <Gaming />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/item/:id" element={<ItemDetailContainer />} />
+          <Route path="/category/:categoryId" element={<ItemListContainer />} />
+        </Routes>
+      </BrowserRouter>
+    </section>
   );
 }
 
